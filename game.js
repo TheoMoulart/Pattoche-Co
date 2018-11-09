@@ -1,9 +1,9 @@
 var grille = [
+    [0,1,1,0,0],
+    [1,1,1,0,0],
     [0,0,0,0,0],
-    [0,0,0,0,0],
-    [0,0,0,0,0],
-    [0,0,0,0,0],
-    [0,0,0,0,0],
+    [0,0,0,0,1],
+    [0,0,0,1,1],
 ];
 
 function getNombreCellulesMortes(x, y) {
@@ -34,10 +34,24 @@ function getNombreCellulesMortes(x, y) {
 // On parcours la grille
 for (indexLigne = 0; indexLigne < 5; indexLigne++) {
     for (indexColonne = 0; indexColonne < 5; indexColonne++) {
-
+        grille[indexLigne][indexColonne] = livingCell(indexLigne, indexColonne);
+        console.log(grille);
     }
 }
+
+function livingCell(x, y){
+    if (grille[x][y] === 1){
+        if (getNombreCellulesMortes(x, y) === 5 || getNombreCellulesMortes(x, y) === 6){
+            return 1
+        } else {
+            return 0
+        }
+    }
+}
+<<<<<<< HEAD
 
 function Function2(){
     
 }
+=======
+>>>>>>> 622d0123a8cd9fb2c0fa15c4cbbb6e9d700b69a1
