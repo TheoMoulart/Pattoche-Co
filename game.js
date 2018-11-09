@@ -48,10 +48,7 @@ function livingCell(x, y){
         }
     }
 }
-<<<<<<< HEAD
 
 function Function2(){
     
 }
-=======
->>>>>>> 622d0123a8cd9fb2c0fa15c4cbbb6e9d700b69a1
