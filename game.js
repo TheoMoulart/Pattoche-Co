@@ -34,6 +34,16 @@ function getNombreCellulesMortes(x, y) {
 // On parcours la grille
 for (indexLigne = 0; indexLigne < 5; indexLigne++) {
     for (indexColonne = 0; indexColonne < 5; indexColonne++) {
+        grille[indexLigne][indexColonne] = livingCell(indexLigne, indexColonne);
+        console.log(grille);
+        setTimeout(1000);
+    }
+}
 
+function livingCell(x, y){
+    if (getNombreCellulesMortes(x, y) === 5 || getNombreCellulesMortes(x, y) === 6){
+        return 1
+    } else {
+        return 0
     }
 }
