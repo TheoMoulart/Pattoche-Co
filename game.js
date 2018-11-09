@@ -37,3 +37,7 @@ for (indexLigne = 0; indexLigne < 5; indexLigne++) {
 
     }
 }
+
+function Function2(){
+    
+}
